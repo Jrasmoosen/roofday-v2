@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roofday — Grow Faster. Profit More. Together.</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo"><img src="https://cdn.prod.website-files.com/6a0625a60cd0bea70b86cbd1/6a0bbf51b7f7539ec1761be3_Roofday_Main-Logo-03.png" alt="Roofday" height="32"></a>
+  <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="/why-roofday.html">Why Roofday</a>
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/member-benefits.html">Member Benefits</a>
+    <a href="https://portal.roofdaygroup.com" target="_blank">Members</a>
+    <a href="/schedule.html" class="nav-cta">Schedule a Call</a>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/why-roofday.html">Why Roofday <span>→</span></a>
+  <a href="/how-it-works.html">How It Works <span>→</span></a>
+  <a href="/member-benefits.html">Member Benefits <span>→</span></a>
+  <a href="https://portal.roofdaygroup.com" target="_blank">Members <span>→</span></a>
+  <a href="/schedule.html" class="menu-cta">Schedule a Call <span>→</span></a>
+</div>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Independent. United. Unstoppable.</div>
+    <h1>GROW <em>FASTER.</em><br>PROFIT MORE.<br>TOGETHER.</h1>
+    <p class="hero-sub">The best roofers in America aren't the biggest ones — they're the ones rooted in their communities. Roofday unites independent, family-owned contractors to buy smarter, innovate faster, and compete harder.</p>
+    <a href="/why-roofday.html" class="btn btn-outline">See How It Works →</a>
+    <div class="stats">
+      <div class="stat"><span class="stat-num">5</span><span class="stat-lbl">States & Growing</span></div>
+      <div class="stat"><span class="stat-num">50+</span><span class="stat-lbl">Locations Across the Midwest</span></div>
+      <div class="stat"><span class="stat-num">$2M+</span><span class="stat-lbl">Contractor Material Savings</span></div>
+      <div class="stat"><span class="stat-num">8%</span><span class="stat-lbl">Avg Net Savings Per Member</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="proof-strip">
+  <span>Michigan</span><span class="dot">·</span>
+  <span>Indiana</span><span class="dot">·</span>
+  <span>Illinois</span><span class="dot">·</span>
+  <span>Ohio</span><span class="dot">·</span>
+  <span>Kentucky</span><span class="dot">·</span>
+  <span>More Coming</span>
+</div>
+
+<section class="calculator-section">
+  <div class="calc-wrap">
+    <div class="calc-left">
+      <div class="eyebrow-tag">Savings Calculator</div>
+      <h2>SEE YOUR <em>REAL</em> SAVINGS.</h2>
+      <p>Select your purchase volume and savings rate to see what Roofday puts back in your pocket every year.</p>
+      <div class="step-lbl">Step 1 — Annual purchase volume</div>
+      <div class="vol-btns">
+        <div class="vol" onclick="setVol(this,250000)">$250K</div>
+        <div class="vol active" onclick="setVol(this,500000)">$500K</div>
+        <div class="vol" onclick="setVol(this,1000000)">$1M</div>
+        <div class="vol" onclick="setVol(this,2000000)">$2M+</div>
+      </div>
+      <div class="step-lbl">Step 2 — Net savings rate</div>
+      <div class="slider-row">
+        <input type="range" id="rateSlider" min="3" max="15" step="0.5" value="8" oninput="calcUpdate()">
+        <span class="slider-val" id="rateVal">8%</span>
+      </div>
+      <div class="slider-lbls"><span>3%</span><span>9%</span><span>15%</span></div>
+    </div>
+    <div class="calc-right">
+      <div class="result-card">
+        <span class="result-lbl">Your annual net savings</span>
+        <span class="result-amt" id="resAmt">$40,000</span>
+        <div class="result-formula" id="resFormula">$500K × 8% = $40,000</div>
+        <p class="result-sub" id="resSub">That's <strong>$40,000</strong> back in your pocket — just for buying what you already buy.</p>
+      </div>
+      <p class="calc-note">Rebate rate varies by volume, distributor partnership, and membership tier.</p>
+      <a href="/schedule.html" class="btn btn-gold">Schedule a Discovery Call →</a>
+    </div>
+  </div>
+</section>
+
+<section class="impact-section">
+  <div class="container">
+    <div class="eyebrow-tag">The Problem</div>
+    <div class="impact-stat">PE FIRMS ACQUIRED <span>200+</span> ROOFING COMPANIES IN 3 YEARS.</div>
+    <p>They're buying your competitors, squeezing margins, and pushing independent contractors out. Roofday is how you fight back.</p>
+  </div>
+</section>
+
+<section class="tiles-section">
+  <div class="container">
+    <div class="tiles">
+      <div class="tile"><span class="tile-cat">Buy Power</span><span class="tile-title">TOP-TIER PRICING</span><p>Same rates as the biggest buyers. Day one.</p></div>
+      <div class="tile"><span class="tile-cat">Innovate</span><span class="tile-title">FASTER TOGETHER</span><p>Monthly calls. Shared playbooks. Real solutions.</p></div>
+      <div class="tile"><span class="tile-cat">Ownership</span><span class="tile-title">100% YOURS</span><p>No equity. No control lost. Ever.</p></div>
+      <div class="tile"><span class="tile-cat">Rebates</span><span class="tile-title">YEAR-END CHECK</span><p>Real money back just for buying what you already buy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <blockquote>"Roofday is the closest thing to having a silent business partner who actually knows roofing. The buying power alone paid for itself in the first quarter."</blockquote>
+    <cite>— <strong>Mike T.</strong>, Sharp Roofing · Indiana</cite>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="container text-center">
+    <div class="eyebrow-tag">Ready to Fly Further?</div>
+    <h2>JOIN THE <em>FLEET.</em></h2>
+    <p>A 20-minute call is all it takes to see if Roofday is the right fit.</p>
+    <a href="/schedule.html" class="btn btn-gold">Schedule Your Discovery Call</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <img src="https://cdn.prod.website-files.com/6a0625a60cd0bea70b86cbd1/6a0bbf51b7f7539ec1761be3_Roofday_Main-Logo-03.png" alt="Roofday" height="28">
+  <div class="footer-links">
+    <a href="/why-roofday.html">Why Roofday</a>
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/member-benefits.html">Benefits</a>
+    <a href="/schedule.html">Schedule a Call</a>
+  </div>
+  <p class="footer-copy">© 2025 Roofday Group. All rights reserved.</p>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="/schedule.html" class="btn btn-gold btn-full">Schedule a Discovery Call</a>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
